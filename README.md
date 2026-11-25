@@ -138,7 +138,8 @@ Covers the signal logic, emergency preemption, lane assignment, validation, smoo
 
 ## 🖼️ Screenshots
 
-> Add screenshots to an `assets/` folder and link them here: dashboard, lane editor, detection GIF.
+><img width="1896" height="907" alt="image" src="https://github.com/user-attachments/assets/66a47337-6978-4ab6-be6d-61506f16c2a0" />
+
 
 ## 👤 Author
 
