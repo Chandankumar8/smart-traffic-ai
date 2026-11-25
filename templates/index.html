@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Traffic Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1>🚦 AI Smart Traffic System</h1>
+    <span><a class="link" href="{{ url_for('calibrate') }}">Edit lanes</a> <span id="status"
+        class="pill">connecting…</span></span>
+  </header>
+
+  <main>
+    <section class="feed"><img src="{{ url_for('video') }}" alt="Live annotated traffic feed"></section>
+
+    <aside>
+      <div class="card summary">
+        <div><small>Total vehicles</small><strong id="total">–</strong></div>
+        <div><small>Active lane</small><strong id="active">–</strong></div>
+        <div><small>Time left</small><strong id="remaining">–</strong></div>
+        <div><small>FPS</small><strong id="fps">–</strong></div>
+      </div>
+      <div class="card">
+        <small>Adaptive vs fixed timer (avg vehicles waiting at red)</small>
+        <div class="compare">
+          <div><small>Adaptive</small><strong id="cmp-a">–</strong></div>
+          <div><small>Fixed 20s</small><strong id="cmp-f">–</strong></div>
+          <div><small>Adaptive vs fixed</small><strong id="cmp-i">–</strong></div>
+        </div>
+        <small class="note">Estimate: both controllers see the same recorded traffic, which doesn't react to the
+          signals.</small>
+      </div>
+      <div id="lanes"></div>
+      <div class="card">
+        <small>Simulate emergency vehicle</small>
+        <div id="emergency-buttons"></div>
+      </div>
+    </aside>
+  </main>
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+
+</html>

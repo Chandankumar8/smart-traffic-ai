@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Lanes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>🛣️ Edit lane zones</h1>
+    <a class="link" href="{{ url_for('index') }}">← Dashboard</a>
+  </header>
+  <div class="cal">
+    <canvas id="cv"></canvas>
+    <aside>
+      <div class="card">
+        <small>Select a lane, then click on the image to add corner points (3 or more). Vehicles are
+          assigned by their bottom-centre point, so outline the road surface of each approach.</small>
+        <div id="rows" style="margin-top:12px"></div>
+        <button id="add">+ Add lane</button>
+        <button id="undo">Undo point</button>
+        <button id="clear">Clear lane</button>
+        <div style="margin-top:12px"><button id="save" class="on" style="background:#2563eb">Save lanes</button></div>
+        <div id="msg" class="msg"></div>
+      </div>
+    </aside>
+  </div>
+  <script src="{{ url_for('static', filename='calibrate.js') }}"></script>
+</body>
+</html>
