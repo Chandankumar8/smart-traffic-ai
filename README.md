@@ -142,7 +142,7 @@ Covers the signal logic, emergency preemption, lane assignment, validation, smoo
 
 ## 👤 Author
 
-Built by **Your Name** (AI, backend and dashboard).
+Built by **Chandan** (AI, backend and dashboard).
 
 ## 🔗 Links
 
